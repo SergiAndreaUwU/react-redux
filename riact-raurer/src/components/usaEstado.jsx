@@ -2,17 +2,11 @@ import {useState, useEffect,useRef ,useReducer, useMemo} from "react"
 
 const UsaEstado=(props)=>{
 
-    const [objeto,setObjeto]=useState({
-        
-        prop1:"XD",
-        prop2:true,
-        prop3:10
-        
-    })
+    const [objeto,setObjeto]=useState(0)
 
     const handleClick=()=>{
 
-        setObjeto({...objeto, prop1:"LOL"})
+        setObjeto(objeto+1)
         props.callback(objeto)
     }
 

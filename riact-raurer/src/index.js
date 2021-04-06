@@ -10,7 +10,7 @@ import './index.css';
 
 const store = configureStore();
 
-const render=()=>{
+// const render=()=>{
 ReactDOM.render(
   <React.StrictMode>
       <ReduxProvider store={store}>
@@ -22,9 +22,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-}
+// }
 
-setInterval(render, 1000);
+// setInterval(render, 1000);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

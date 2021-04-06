@@ -10,7 +10,7 @@ export default function productReducer(state = initialState.products, action) {
         product.id === action.product.id ? action.product : product
       );
     case types.LOAD_PRODUCTS_SUCCESS:
-      return action.products;
+      return [...state,...action.products];
     default:
       return state;
   }

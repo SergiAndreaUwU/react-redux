@@ -1,9 +1,9 @@
 {
     "products": [
-      { "id": 1, "product": "chocolate", "price": 5 },
-      { "id": 2, "product": "papas", "price": 10 },
-      { "id": 3, "product": "jugo", "price": 20 },
-      { "id": 4, "product": "chicle", "price": 1 }
+      { "id": 10, "nombre": "chocolate", "price": 5 },
+      { "id": 11, "nombre": "papas", "price": 10 },
+      { "id": 12, "nombre": "jugo", "price": 20 },
+      { "id": 13, "nombre": "chicle", "price": 1 }
     ],
   
     "profile": { "name": "user_x" }

@@ -1,5 +1,5 @@
 import * as types from "./actionTypes";
-import * as courseApi from "../../api/courseApi"; //change this
+import * as productsApi from "../../api/productsApi"; 
 
 export function loadProductSuccess(products) {
   return { type: types.LOAD_PRODUCTS_SUCCESS, products };
@@ -15,8 +15,8 @@ export function updateProductSuccess(products) {
 
 export function loadProducts() {
   return function(dispatch) {
-    return courseApi //this
-      .getCourses() //and this
+    return productsApi 
+      .getProducts() 
       .then(products => {
         dispatch(loadProductSuccess(products));
       })
@@ -26,18 +26,18 @@ export function loadProducts() {
   };
 }
 
-export function saveProduct(product) {
-  //eslint-disable-next-line no-unused-vars
-  return function(dispatch, getState) {
-    return courseApi //this
-      .saveCourse(product) //this
-      .then(savedProduct => {
-        product.id
-          ? dispatch(updateProductSuccess(savedProduct))
-          : dispatch(createProductSuccess(savedProduct));
-      })
-      .catch(error => {
-        throw error;
-      });
-  };
-}
+// export function saveProduct(product) {
+//   //eslint-disable-next-line no-unused-vars
+//   return function(dispatch, getState) {
+//     return productsApi //this
+//       .saveCourse(product) //this
+//       .then(savedProduct => {
+//         product.id
+//           ? dispatch(updateProductSuccess(savedProduct))
+//           : dispatch(createProductSuccess(savedProduct));
+//       })
+//       .catch(error => {
+//         throw error;
+//       });
+//   };
+// }
